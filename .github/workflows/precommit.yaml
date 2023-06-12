@@ -1,0 +1,23 @@
+name: Pre-commit
+
+on: [push]
+
+jobs:
+  pre-commit:
+    name: Run pre-commit checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.9
+      - name: Restore pre-commit cache
+        id: cached-pre-commit
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pre-commit
+          key: pre-commit-${{ hashFiles('.pre-commit-config.yaml') }}
+      - name: Install pre-commit
+        run: pip install pre-commit
+      - name: Run checks
+        run: pre-commit run --all-files
