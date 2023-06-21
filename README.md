@@ -1,20 +1,19 @@
 # Docker-ViT
 
-## Description
+In this documentation, I will explain how to use the code of this repository to run a Vision Transformer (ViT) endpoint for image captioning. More precisely, I will show how to run the endpoint both locally on your computer and on a cloud GPU instance such as [Runpod](https://www.runpod.io/). Finally, I will explain how to invoke these endpoints, which means send them an image and get an image description in return.
 
-In this page, I will explain how to use the code of this repository to run a Vision Transformer (ViT) endpoint for image captioning. More precisely, I will show how to run the endpoint:
-
-* Locally on your computer
-* On a cloud GPU instance such as [Runpod](https://www.runpod.io/)
-
-And finally, I will explain how to invoke these endpoints (i.e. send them an image and get an image description in return).
-
-The motivation behind this project are explained in the Motivation section at the end of this page.
-
-Please note that the code can easily be adapted to other models, both vision and non-vision ones.
+Please note that the code can easily be adapted to other AI models, both vision and non-vision ones.
 
 
-## Run the ViT endpoint locally
+## Table of Contents
+
+* [Local ViT endpoint](#local-vit-endpoint)
+* [Cloud ViT endpoint](#cloud-vit-endpoint)
+* [Invoke the endpoint](#invoke-the-endpoint)
+* [Motivation](#motivation)
+
+
+## Local ViT endpoint
 
 Running the ViT endpoint locally relies on the use of the [Poetry](https://python-poetry.org/) package manager. Please make sure to first install Poetry and get familiar with it before moving to the next part. However, note that Poetry is not fundamental here and can easily be replaced by pip or conda.
 
@@ -50,7 +49,7 @@ WARNING: This is a development server. Do not use it in a production deployment.
 ```
 
 
-## Run the ViT endpoint on a cloud instance
+## Cloud ViT endpoint
 
 To explain how to run the ViT endpoint on a cloud GPU instance, I will use [Runpod](https://www.runpod.io) GPU cloud as an example, but other services should work more or less the same way.
 
